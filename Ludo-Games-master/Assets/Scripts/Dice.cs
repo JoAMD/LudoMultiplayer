@@ -37,6 +37,8 @@ public class Dice : MonoBehaviour {
 			RaycastHit2D hit = Physics2D.Raycast (Camera.main.ScreenToWorldPoint (pos), Vector2.zero);
 			if (hit != null) {
 				if (hit.transform == transform) {
+                    //check if localplayer.....
+                    Debug.Log("rolling dice for " + gameObject.name);
 					StartCoroutine (RollDice ());
 				}
 			}
